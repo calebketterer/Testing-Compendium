@@ -1,14 +1,17 @@
 {
-  "name": "example-website",
+  "name": "testing-compendium",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "postbuild": "node audit-components.js",
+    "deploy": "ng build --configuration production --base-href /Testing-Compendium/ && npx angular-cli-ghpages --dir=dist/testing-compendium/browser/",
+    
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "apptree": "find . -maxdepth 5 -not -path \"*/.*\" -not -path \"./.angular*\" -not -path \"./.vscode*\" -not -path \"./dist*\" -not -path \"./node_modules*\" | sed -e \"s/[^-][^\\/]*\\// |/g\" -e \"s/|\\([^ ]\\)/|-\\1/\"",
+    "wholetree": "find . -maxdepth 5 -not -path \"*/.*\" -not -path \"./.angular*\" -not -path \"./.vscode*\" -not -path \"./dist*\" -not -path \"./node_modules*\" | sed -e \"s/[^-][^\\/]*\\// |/g\" -e \"s/|\\([^ ]\\)/|-\\1/\"",
+    "apptree": "find src/app -maxdepth 5 -not -path \"src/app/games/*/*\" -not -path \"*/.*\" | sed -e \"s/[^-][^\\/]*\\// |/g\" -e \"s/|\\([^ ]\\)/|-\\1/\"",
     "diepapptree": "find src/app/diep -not -path \"*/.*\" | sed -e \"s/[^-][^\\/]*\\// |/g\" -e \"s/|\\([^ ]\\)/|-\\1/\""
   },
   "private": true,

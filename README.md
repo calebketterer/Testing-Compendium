@@ -109,7 +109,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploying as a Github Page
 
-If not already done, type `npm install -g angular-cli-ghpages` in terminal. Then, run `ng build --configuration production --base-href /Calebs-Compendium/` and  `npx angular-cli-ghpages --dir=dist/example-website/browser/`. After that, the site should be updated at `https://calebketterer.github.io/Calebs-Compendium/`
+If not already done, type `npm install -g angular-cli-ghpages` in terminal. Then, run `ng build --configuration production --base-href /Testing-Compendium/` and  `npx angular-cli-ghpages --dir=dist/testing-compendium/browser/`. After that, the site should be updated at `https://calebketterer.github.io/Calebs-Compendium/`
 
 <details>
   <summary><strong>Misc Notes</strong></summary>
