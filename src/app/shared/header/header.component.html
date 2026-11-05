@@ -1,7 +1,7 @@
 <div class="header-container">
     <!-- Centered Static Header Title -->
     <div class="title-wrapper" (click)="goHome()">
-        <h1 class="static-header-title">
+        <h1 class="static-header-title" [class.animate]="isAnimating">
             <span class="gradient-text">Caleb's Testing Compendium</span>
         </h1>
     </div>

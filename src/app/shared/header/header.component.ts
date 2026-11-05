@@ -1,3 +1,4 @@
+// Component managing the top global header navigation and home redirection logic.
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
@@ -17,6 +18,8 @@ export class HeaderComponent implements OnInit {
   public state = inject(HomeStateService);
   private router = inject(Router);
   private transitionService = inject(PageTransitionService);
+  
+  isAnimating = false;
 
   ngOnInit(): void {
     const initialPath = this.router.url.replace('/', '').toLowerCase();
@@ -24,6 +27,8 @@ export class HeaderComponent implements OnInit {
     if (currentView !== this.state.selectedView) {
       this.state.updateView(currentView);
     }
+
+    this.triggerFade();
 
     // Listen to subsequent route changes
     this.router.events
@@ -35,7 +40,16 @@ export class HeaderComponent implements OnInit {
         if (view !== this.state.selectedView) {
           this.state.updateView(view);
         }
+
+        this.triggerFade();
       });
+  }
+
+  private triggerFade(): void {
+    this.isAnimating = false;
+    setTimeout(() => {
+      this.isAnimating = true;
+    }, 10);
   }
 
   goHome(): void {

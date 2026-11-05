@@ -17,6 +17,10 @@
     letter-spacing: -0.03em;
     margin: 0;
     white-space: nowrap;
+    opacity: 0;
+}
+
+.static-header-title.animate {
     animation: fadeInDown 10s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
