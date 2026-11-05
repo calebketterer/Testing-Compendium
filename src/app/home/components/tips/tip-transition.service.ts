@@ -1,5 +1,5 @@
 import { Injectable, ElementRef, Renderer2 } from '@angular/core';
-import { HomeStateService } from '../services/home.state.service';
+import { HomeStateService } from '../../services/home.state.service';
 import { calculateExactFontSize } from './tip-fit.utility';
 
 @Injectable({

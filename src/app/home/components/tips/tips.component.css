@@ -1,0 +1,32 @@
+.tips-container {
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    max-width: 400px;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none;
+}
+
+#Tips {
+    margin: 0 !important;
+    cursor: pointer;
+    text-align: center;
+    color: var(--gray-70);
+    white-space: nowrap;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#Tips.is-fading {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .tips-container {
+        max-width: 90%;
+    }
+}

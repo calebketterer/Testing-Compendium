@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomeStateService } from './services/home.state.service';
 import { PageTransitionService } from '../shared/transitions/page-transition.service';
-import { TipTransitionService } from './utilities/tip-transition.service';
+import { TipTransitionService } from './components/tips/tip-transition.service';
 import { HomeGreetingComponent } from './components/home-greeting/home-greeting.component';
 import { HomeLinksComponent } from './components/home-links/home-links.component';
 

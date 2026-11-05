@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomeStateService } from '../../services/home.state.service';
 import { PageTransitionService } from '../../../shared/transitions/page-transition.service';
-import { TipTransitionService } from '../../utilities/tip-transition.service';
+import { TipTransitionService } from '../tips/tip-transition.service';
 
 @Component({
   selector: 'app-home-greeting',
