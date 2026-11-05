@@ -6,12 +6,14 @@ h1 {
     letter-spacing: -0.125rem;
     margin: 1rem 0;
     font-family: "Inter Tight", sans-serif;
+    user-select: none;
 }
 
 p {
     margin: 0 0 1rem 0;
     color: var(--gray-70);
     line-height: 1.5;
+    user-select: none;
 }
 
 .left-side {
@@ -44,6 +46,7 @@ p {
     font-weight: 800;
     font-size: 1rem;
     color: rgb(32, 35, 36);
+    user-select: none;
 }
 
 .tips-container {
@@ -55,6 +58,7 @@ p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    user-select: none;
 }
 
 #Tips {

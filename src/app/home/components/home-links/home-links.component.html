@@ -8,10 +8,10 @@
 <ng-template #pillLinks>
     @for (item of [
         { title: 'Google Site', link: 'https://sites.google.com/view/calebketterer?usp=sharing' },
+        { title: 'My Main Angular Site', link: 'https://calebketterer.github.io/' },
         { title: 'Explore the Google Docs', link: 'https://docs.google.com/document/d/1iRuBT_4kFa9iq_dP6nAQ4kQsEGyxmUw-P05On__oL3A/edit?usp=sharing' },
         { title: 'Personal Github', link: 'https://github.com/calebketterer' },
-        { title: 'Paper Gwent Resources', link: 'https://drive.google.com/drive/folders/1buJl4aGBJxhNY5lkLGh8VHywMnii-BaU?usp=drive_link' },
-        { title: 'Custom Card Generator', link: 'https://gwentcard.github.io' }
+        { title: 'Paper Gwent Resources', link: 'https://drive.google.com/drive/folders/1buJl4aGBJxhNY5lkLGh8VHywMnii-BaU?usp=drive_link' }
     ]; track item.title) {
         <a class="pill" [href]="item.link" target="_blank" rel="noopener">
             <span class="font-bold">{{ item.title }}</span>

@@ -18,6 +18,7 @@
     margin: 0;
     white-space: nowrap;
     opacity: 0;
+    user-select: none;
 }
 
 .static-header-title.animate {
