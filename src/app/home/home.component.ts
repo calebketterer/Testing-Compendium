@@ -1,20 +1,20 @@
 import { Component, ElementRef, ViewChild, Renderer2, AfterViewInit, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HomeStateService } from './home.state.service';
+import { HomeStateService } from './services/home.state.service';
 import { PageTransitionService } from '../shared/transitions/page-transition.service';
-import { TipTransitionService } from './tip-transition.service';
+import { TipTransitionService } from './utilities/tip-transition.service';
+import { HomeGreetingComponent } from './components/home-greeting/home-greeting.component';
+import { HomeLinksComponent } from './components/home-links/home-links.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HomeGreetingComponent, HomeLinksComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements AfterViewInit {
-  @ViewChild('heyThere', { static: true }) heyThere!: ElementRef<HTMLElement>;
-  @ViewChild('goodNews', { static: true }) goodNews!: ElementRef<HTMLElement>;
   @ViewChild('Tips', { static: true }) Tips!: ElementRef<HTMLElement>;
 
   private renderer = inject(Renderer2);
@@ -39,22 +39,8 @@ export class HomeComponent implements AfterViewInit {
     this.pageTransitionService.navigateWithTransition(val);
   }
 
-  shakeHeyThere() {
-    this.applyShake(this.heyThere.nativeElement);
-  }
-
-  shakeGoodNews() {
-    this.applyShake(this.goodNews.nativeElement);
-  }
-
   cycleTipWithFade() {
     this.tipTransitionService.cycleTipWithFade(this.Tips, this.renderer);
-  }
-
-  private applyShake(element: HTMLElement) {
-    this.renderer.removeClass(element, 'shake');
-    void element.offsetWidth; // trigger reflow
-    this.renderer.addClass(element, 'shake');
   }
 
   toggleDirection() {

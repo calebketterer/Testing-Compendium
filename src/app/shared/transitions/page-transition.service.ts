@@ -1,3 +1,4 @@
+// Service managing route navigation lifecycle hooks with full-screen fade transitions.
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';

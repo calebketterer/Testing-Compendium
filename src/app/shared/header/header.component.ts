@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
-import { HomeStateService } from '../home/home.state.service';
-import { PageTransitionService } from '../shared/transitions/page-transition.service';
+import { HomeStateService } from '../../home/services/home.state.service';
+import { PageTransitionService } from '../transitions/page-transition.service';
 
 @Component({
   selector: 'app-header',

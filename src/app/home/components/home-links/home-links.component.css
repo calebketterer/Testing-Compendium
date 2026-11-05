@@ -1,0 +1,58 @@
+.right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1.25rem;
+}
+
+.pill {
+    display: inline-flex; 
+    align-items: center;
+    padding: 0.375rem 0.85rem;
+    border-radius: 2.75rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--pill-accent);
+    background: color-mix(in srgb, var(--pill-accent) 8%, transparent);
+    transition: all 0.2s ease;
+    white-space: nowrap; 
+}
+
+.pill:hover { 
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent); 
+}
+
+.social-links { 
+    display: flex; 
+    gap: 1rem; 
+    margin-top: 1.5rem;
+    padding-left: 0.25rem; 
+}
+
+.social-links path { 
+    fill: var(--gray-40); 
+    transition: fill 0.3s ease; 
+}
+
+.social-links a:hover svg path { 
+    fill: var(--gray-90); 
+}
+
+/* Dynamic Pill Colors */
+.pill:nth-child(6n+1) { --pill-accent: var(--violet); }
+.pill:nth-child(6n+2) { --pill-accent: var(--blue); }
+.pill:nth-child(6n+3) { --pill-accent: var(--green); }
+.pill:nth-child(6n+4) { --pill-accent: var(--yellow); }
+.pill:nth-child(6n+5) { --pill-accent: var(--red); }
+
+@media (max-width: 768px) {
+    .right-side, .pill-group {
+        align-items: center;
+    }
+}

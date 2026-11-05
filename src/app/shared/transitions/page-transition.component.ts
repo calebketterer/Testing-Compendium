@@ -1,3 +1,4 @@
+// Component rendering the global black transition overlay during route changes.
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageTransitionService } from './page-transition.service';

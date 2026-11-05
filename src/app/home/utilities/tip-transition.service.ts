@@ -1,5 +1,5 @@
 import { Injectable, ElementRef, Renderer2 } from '@angular/core';
-import { HomeStateService } from './home.state.service';
+import { HomeStateService } from '../services/home.state.service';
 import { calculateExactFontSize } from './tip-fit.utility';
 
 @Injectable({
@@ -18,10 +18,8 @@ export class TipTransitionService {
     this.isTipAnimating = true;
     const el = tipsElementRef.nativeElement;
 
-    // Phase 1: Fade Out
     renderer.addClass(el, 'is-fading');
 
-    // Phase 2: Cycle state, recalculate exact font size, and Fade In
     setTimeout(() => {
       this.state.cycleTip();
       this.fitTipText(tipsElementRef, renderer);
@@ -50,11 +48,9 @@ export class TipTransitionService {
       return;
     }
 
-    // Force single-line inline behavior on target element
     renderer.setStyle(el, 'whiteSpace', 'nowrap');
     renderer.setStyle(el, 'display', 'inline-block');
 
-    // Read true parent container content bounds excluding padding
     const containerStyle = window.getComputedStyle(container);
     const paddingLeft = parseFloat(containerStyle.paddingLeft) || 0;
     const paddingRight = parseFloat(containerStyle.paddingRight) || 0;
@@ -63,7 +59,6 @@ export class TipTransitionService {
 
     const computedStyle = window.getComputedStyle(el);
 
-    // Calculate exact font size using off-screen layout measurement
     const calculatedFontSize = calculateExactFontSize(
       text,
       availableWidth,

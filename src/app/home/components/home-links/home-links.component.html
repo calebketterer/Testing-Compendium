@@ -1,0 +1,43 @@
+<div class="right-side">
+    <div class="pill-group">
+        <ng-container *ngTemplateOutlet="pillLinks"></ng-container>
+    </div>
+    <ng-container *ngTemplateOutlet="socialLinks"></ng-container>
+</div>
+
+<ng-template #pillLinks>
+    @for (item of [
+        { title: 'Google Site', link: 'https://sites.google.com/view/calebketterer?usp=sharing' },
+        { title: 'Explore the Google Docs', link: 'https://docs.google.com/document/d/1iRuBT_4kFa9iq_dP6nAQ4kQsEGyxmUw-P05On__oL3A/edit?usp=sharing' },
+        { title: 'Personal Github', link: 'https://github.com/calebketterer' },
+        { title: 'Paper Gwent Resources', link: 'https://drive.google.com/drive/folders/1buJl4aGBJxhNY5lkLGh8VHywMnii-BaU?usp=drive_link' },
+        { title: 'Custom Card Generator', link: 'https://gwentcard.github.io' }
+    ]; track item.title) {
+        <a class="pill" [href]="item.link" target="_blank" rel="noopener">
+            <span class="font-bold">{{ item.title }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 -960 960 960" width="14" fill="currentColor">
+                <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144H688L316 712Z"/>
+            </svg>
+        </a>
+    }
+</ng-template>
+
+<ng-template #socialLinks>
+    <div class="social-links">
+        <a href="https://github.com/calebketterer" aria-label="Github" target="_blank" rel="noopener">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.24389 21.4332C6.07072 22.1237 5.35461 19.8649 5.35461 19.8649C4.7977 18.4282 3.97044 18.0405 3.97044 18.0405C2.79225 17.2461 4.05794 17.263 4.05794 17.263C5.35823 17.3542 6.01686 18.6013 6.01686 18.6013C7.1705 20.6076 9.04327 20.0912 9.74126 19.7946C9.84475 18.9811 10.1576 18.4434 10.5057 18.1493C7.65773 17.8496 4.66141 16.7792 4.66141 11.9556C4.66141 10.5868 5.1403 9.51465 5.91927 8.67154C5.79588 8.37261 5.3816 7.07349 6.03684 5.43032C6.03684 5.43032 7.03538 5.10733 9.21249 6.5185C10.1639 6.23681 11.1718 6.09626 12.1794 6.09134C13.1875 6.09626 14.196 6.23681 15.1492 6.5185C17.3236 5.10733 18.3198 5.43032 18.3198 5.43032C18.9775 7.07349 18.5639 8.37261 18.4405 8.67154C19.222 9.51465 19.6975 10.5868 19.6975 11.9556C19.6975 16.791 16.6975 17.8468 13.8437 18.1434C14.2928 18.5148 14.6975 19.2875 14.6975 20.3686C14.6833 21.8765 14.6833 23.0359 14.6833 23.3871C14.6833 23.7142 14.904 24.0982 15.5262 23.9787C20.4176 22.3535 23.9474 12.3047 23.9474 12.3047C23.9474 5.50942 18.4411 0 12.3047 0Z"/>
+            </svg>
+        </a>
+        <a href="https://twitter.com/angular" aria-label="Twitter" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw" aria-label="Youtube" target="_blank" rel="noopener">
+            <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0472 18.9196 26.4964 19.2367 25.8934 19.3977C23.6655 19.9928 14.5006 19.9928 14.5006 19.9928C14.5006 19.9928 5.33574 19.9928 3.10781 19.3977C2.50384 19.2367 1.95308 18.9196 1.51066 18.4758C1.07017 18.0325 0.75397 17.4813 0.593511 16.8774C0 14.6484 0 10 0 10C0 10 0 5.35161 0.593511 3.12258C0.75397 2.51866 1.07017 1.96749 1.51066 1.52422C1.95308 1.0804 2.50384 0.763292 3.10781 0.602324C5.33574 0.00719708 14.5006 0.00719708 14.5006 0.00719708C14.5006 0.00719708 23.6655 0.00719708 25.8934 0.602324C26.4964 0.763292 27.0472 1.0804 27.4896 1.52422ZM19.1886 9.99998L11.8554 5.64019V14.3598L19.1886 9.99998Z"/>
+            </svg>
+        </a>
+    </div>
+</ng-template>

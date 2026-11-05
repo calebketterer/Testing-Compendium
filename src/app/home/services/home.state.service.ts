@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TIPS_LIST } from './home.constants';
+import { TIPS_LIST } from '../constants/home.constants';
 
 @Injectable({
   providedIn: 'root'
