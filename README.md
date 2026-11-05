@@ -1,13 +1,13 @@
 # Caleb's Virtual Compendium
 
-<a href="https://YOUR-LINK-HERE.com">
+<a href="https://calebketterer.github.io/Testing-Compendium/">
   <img width="510" height="300" alt="Screenshot 2026-05-03 231029" src="https://github.com/user-attachments/assets/c784d64d-eecc-4ad1-a948-a7f3ab37d0da" />
 </a>
 
 ---
 
 <strong>Welcome!</strong> This project contains multiple interactive links, visualizations, and games- all created by me.  
-Visit the most recent deployment via Github Pages at [https://calebketterer.github.io/Calebs-Compendium/](https://calebketterer.github.io/Calebs-Compendium/).  
+Visit the most recent deployment via Github Pages at [https://calebketterer.github.io/Testing-Compendium/](https://calebketterer.github.io/Testing-Compendium/).  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
 
 ## Features
@@ -109,7 +109,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploying as a Github Page
 
-If not already done, type `npm install -g angular-cli-ghpages` in terminal. Then, run `ng build --configuration production --base-href /Testing-Compendium/` and  `npx angular-cli-ghpages --dir=dist/testing-compendium/browser/`. After that, the site should be updated at `https://calebketterer.github.io/Calebs-Compendium/`
+If not already done, type `npm install -g angular-cli-ghpages` in terminal. Then, run `ng build --configuration production --base-href /Testing-Compendium/` and  `npx angular-cli-ghpages --dir=dist/testing-compendium/browser/`. After that, the site should be updated at `https://calebketterer.github.io/Testing-Compendium/`
 
 <details>
   <summary><strong>Misc Notes</strong></summary>
