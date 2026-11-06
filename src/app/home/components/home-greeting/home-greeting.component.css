@@ -102,7 +102,7 @@ p {
         font-size: 2.2rem;
         letter-spacing: -0.05rem;
     }
-    .view-selector-dropdown, .tips-container {
-        max-width: 90%;
+    .view-selector-dropdown {
+        max-width: 50%;
     }
 }
