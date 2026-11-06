@@ -4,9 +4,13 @@
     justify-content: center;
     width: 100%;
     padding: 1rem 1.5rem;
+    box-sizing: border-box;
 }
 
 .title-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     text-align: center;
     cursor: pointer;
 }
@@ -16,9 +20,10 @@
     font-weight: 700;
     letter-spacing: -0.03em;
     margin: 0;
-    white-space: nowrap;
+    white-space: nowrap; /* Forces 1 clean line on desktop */
     opacity: 0;
     user-select: none;
+    text-align: center;
 }
 
 .static-header-title.animate {
@@ -35,6 +40,10 @@
     animation: hueBreathing2 5s ease-in-out infinite;
 }
 
+.mobile-break {
+    display: none;
+}
+
 @keyframes hueBreathing2 { 
     0% { filter: hue-rotate(0deg); }
     100% { filter: hue-rotate(360deg); }
@@ -48,5 +57,15 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem 0.75rem;
+    }
+
+    .mobile-break {
+        display: block;
     }
 }
