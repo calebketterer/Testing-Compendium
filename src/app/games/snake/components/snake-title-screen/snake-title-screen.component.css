@@ -1,0 +1,67 @@
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  background: radial-gradient(circle at center, rgba(0, 255, 128, 0.05) 0%, transparent 75%);
+  color: #00ff80;
+  text-align: center;
+  cursor: pointer;
+}
+
+.title-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.glitch-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  color: #00ff80;
+  text-shadow: 0 0 14px rgba(0, 255, 128, 0.6);
+}
+
+.subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: #00cc66;
+  opacity: 0.8;
+}
+
+.canvas-wrapper {
+  border: 1px solid rgba(0, 255, 128, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.1);
+  background: #040805;
+}
+
+canvas {
+  display: block;
+}
+
+.prompt-box {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #00ff80;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 255, 128, 0.3);
+  border-radius: 4px;
+  background: rgba(0, 255, 128, 0.05);
+}
+
+.blink {
+  animation: blinkAnim 1.2s infinite;
+}
+
+@keyframes blinkAnim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
